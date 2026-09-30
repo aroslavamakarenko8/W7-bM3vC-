@@ -1,0 +1,208 @@
+{
+  "style": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow",
+  "palette": [
+    "#171A22",
+    "#0E1017",
+    "#1E2330",
+    "#2A3142",
+    "#F5C442",
+    "#37B8CC",
+    "#7AC84F",
+    "#E94B3D",
+    "#FFF1D6",
+    "#0B0D13"
+  ],
+  "notes": "One art style for the whole project, repeated word for word at the head of every prompt (rule F.1c). Every mechanical sprite declares its orientation in words (rule C.8); the symmetric ones say so explicitly so nothing gets mirrored by accident - only sprite_station_marker is asymmetric, and the code mirrors it deliberately for the left verge. Sprites are drawn on whatever backdrop the model likes because the pipeline cuts the background away (rule F.1b), so no prompt argues about background colour. sprite_slot_frame and sprite_plate_panel are 9-sliced in their .meta, so their prompts ask for a flat hollow centre and a uniform border that survives stretching. sprite_rail_tile is stacked vertically, so its prompt describes its top and bottom EDGES rather than its geometry (rule F.1d). The four crate colours each carry a different white stamp shape, so a crate is readable on a compressed screenshot even without colour. No prompt contains the app name, and no sprite carries lettering of any kind (hard rule 1).",
+  "assets": [
+    {
+      "name": "bg_main",
+      "type": "bg",
+      "transparent": false,
+      "target": "Assets/Art/Textures/_BASE/Backgrounds/BG_main.png",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, three parallel rail tracks running away from the viewer and converging high in the distance, tall signal masts with amber lamps standing along both verges, graphite sky with a low warm haze over the horizon, deep shadow gathering in the corners, the middle of the frame kept calm and low contrast as a safe area for a hero object and a button, the lower third darkened so controls read over it, vertical 9:19.5 portrait composition, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "bg_game",
+      "type": "bg",
+      "transparent": false,
+      "target": "Assets/Art/Textures/_BASE/Backgrounds/BG_game.png",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, a dark rail bed running the full height of the frame, flat low contrast gravel and sleepers, a faint cyan glow along the outer verges, a soft vignette in the corners, the whole centre deliberately quiet and empty so gameplay pieces read on top of it, the top quarter and the bottom sixth darkened so a HUD stays legible, vertical 9:19.5 portrait composition, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_cart_hero",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_cart_hero.png",
+      "orientation": "three-quarter view from behind and slightly above, nose pointing UP the screen, horizontally symmetric so it is never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single rugged flatbed rail cart seen from behind and slightly above with its nose pointing away up the screen, empty amber-lit deck, chunky wheels on a short axle, one glowing headlamp, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_crate_amber",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crate_amber.png",
+      "orientation": "front three-quarter view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single glossy shipping crate with an amber yellow body and dark metal corner brackets, a single solid white CIRCLE stamped flat on the face turned towards the viewer, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_crate_cyan",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crate_cyan.png",
+      "orientation": "front three-quarter view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single glossy shipping crate with a cyan blue body and dark metal corner brackets, a single solid white SQUARE stamped flat on the face turned towards the viewer, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_crate_green",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crate_green.png",
+      "orientation": "front three-quarter view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single glossy shipping crate with a fresh green body and dark metal corner brackets, a single solid white HEXAGON stamped flat on the face turned towards the viewer, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_crate_red",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crate_red.png",
+      "orientation": "front three-quarter view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single glossy shipping crate with a warm red body and dark metal corner brackets, a single solid white TRIANGLE stamped flat on the face turned towards the viewer, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_hazard_barrier",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_hazard_barrier.png",
+      "orientation": "front view, wider than tall, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single low rail barrier seen from the front, red and cream diagonal warning stripes across a wide plank, a small lit lamp on top, wider than it is tall, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_hazard_crate",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_hazard_crate.png",
+      "orientation": "front view, wider than tall, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single splintered broken wooden crate lying across the track with straw spilling out of the crack, wider than it is tall, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_rail_tile",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_rail_tile.png",
+      "orientation": "vertical tile, symmetric left to right; the rails meet the TOP edge and the BOTTOM edge at exactly the same places so stacked copies continue without a seam",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, a seamless vertical rail track tile, two straight steel rails running from the very bottom edge to the very top edge over dark sleepers and gravel, the rails touch the top edge and the bottom edge at exactly the same horizontal positions so stacked copies continue without a seam, nothing else in the frame, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_station_marker",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_station_marker.png",
+      "orientation": "side view, facing RIGHT, taller than wide, asymmetric - the code mirrors it deliberately for the left verge",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single trackside signal mast seen from the side and facing right, a slim post with a round amber lamp head on a short arm reaching to the right, taller than it is wide, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_lane_fan",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_lane_fan.png",
+      "orientation": "top-down perspective, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, three rail tracks side by side fanning upward and converging towards a vanishing point at the top, seen in top-down perspective over dark gravel, a faint cyan glow along the outer edges, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_mark_signal",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_mark_signal.png",
+      "orientation": "front view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single abstract emblem: an upward pointing chevron enclosed in a hexagon with a small simple crate silhouette in the middle, amber body with a thin cyan rim, flat and graphic, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no lettering of any kind, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_tut_swipe",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_tut_swipe.png",
+      "orientation": "front view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single instructional icon: a simple hand silhouette sliding sideways over three short parallel rail lines with a double headed arrow underneath it, cream on a plain shape, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_tut_order",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_tut_order.png",
+      "orientation": "front view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single instructional icon: a row of four small coloured square tiles in amber, cyan, green and red with a short arrow pointing down at the first tile, flat and graphic, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_tut_signal",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_tut_signal.png",
+      "orientation": "front view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single instructional icon: three round signal lamps in a row, two of them lit green and the third dark with a red cross over it, flat and graphic, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "icon_back",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/icon_back.png",
+      "orientation": "side view, pointing LEFT, asymmetric and never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single chunky arrow icon pointing to the left, thick rounded stroke, solid amber, flat and graphic, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "icon_pause",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/icon_pause.png",
+      "orientation": "front view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single pause icon made of two thick rounded vertical bars side by side, solid amber, flat and graphic, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "icon_close",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/icon_close.png",
+      "orientation": "front view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single close icon made of two thick rounded strokes crossing in an X, solid cream, flat and graphic, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "icon_chevron",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/icon_chevron.png",
+      "orientation": "front view, point facing UP, symmetric left to right and never mirrored horizontally",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single chevron icon with its point facing up, thick rounded stroke, solid dark graphite, flat and graphic, symmetric left to right, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_slot_frame",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_slot_frame.png",
+      "orientation": "front view, symmetric, never mirrored; nine-sliced with a 24 pixel border so the centre stretches and the corners do not",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single rounded square user interface slot frame, a thin even bright border of uniform thickness on all four sides, a completely flat empty hollow centre, rounded corners of equal radius, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_pip_live",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_pip_live.png",
+      "orientation": "front view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single round signal lamp seen head on, lit and glowing bright green inside a dark metal ring, glossy highlight, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_pip_dead",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_pip_dead.png",
+      "orientation": "front view, symmetric, never mirrored",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single round signal lamp seen head on, dark and burnt out inside a dark metal ring with a thick red cross drawn over its face, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_plate_panel",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_plate_panel.png",
+      "orientation": "front view, symmetric, never mirrored; nine-sliced with a 40 pixel border so the centre stretches and the corners do not",
+      "prompt": "flat cel-shaded game illustration, crisp dark contour, night freight yard, amber and cyan signal glow, one single plain rounded rectangle panel plate filled edge to edge with one flat solid light colour, a uniform narrow rim of the same thickness on all four sides, rounded corners of equal radius, absolutely no pattern or texture or shading inside it, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    }
+  ]
+}
